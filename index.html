@@ -62,6 +62,7 @@
         display: grid;
         grid-template-rows: 1fr;
         padding: 2vw;
+        border: solid 1px yellow;
       }
       .theme-selector-div {
         display: row;
@@ -189,104 +190,255 @@
       .attribution a {
         color: hsl(52, 100%, 62%);
       }
+      @media (max-width: 375px) {
+      }
+      @media (min-width: 375px) and (max-width: 480px) {
+        .big-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          
+        }
+        .main-container {
+          display: grid;
+          grid-template-rows: 1fr;
+          padding: 2vw;
+          width:99%;
+          border: solid 1px yellow;
+        }
+        .theme-selector-div {
+          display: row;
+          flex-direction: column;
+          margin-bottom: 6vw;
+        }
+        .button-theme-selector-div {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          background-color: hsl(223, 31%, 20%);
+          width: 18vw;
+          height: fit-content;
+          border-radius: 4vw;
+          padding: 1vw;
+        }
+        .number-theme-selector-div {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          width: 18vw;
+          border-radius: 4vw;
+          padding: 1vw;
+          color: hsl(0, 100%, 100%);
+        }
+        .number-theme-selector-label {
+          color: hsl(0, 100%, 100%);
+          font-family: League_Spartan-Bold;
+          font-size: 2.5vw;
+        }
+        .button-selector {
+          border-radius: 50%;
+          width: 3.5vw;
+          height: 3.5vw;
+          border: solid 1px hsl(6, 63%, 50%);
+          background-color: hsl(6, 63%, 50%);
+          cursor: pointer;
+        }
+        .container-title-selector-div {
+          display: grid;
+          grid-template-columns: 4fr 1fr 1fr;
+          width:100%;
+          border:solid 1px blue;
+        }
+        .label-title {
+          font-family: League_Spartan-ExtraBold;
+          font-size: 7vw;
+          color: hsl(0, 100%, 100%);
+          width: fit-content;
+          height: fit-content;
+          margin-top: 1.8vw;
+        }
+        .label-theme {
+          font-family: League_Spartan-ExtraBold;
+          font-size: 2.5vw;
+          width: fit-content;
+          height: fit-content;
+          color: hsl(0, 100%, 100%);
+          margin-top: 6.2vw;
+        }
+        .screen-calc {
+          background-color: hsl(224, 36%, 15%);
+          border: solid 1px hsl(224, 36%, 15%);
+          text-align: right;
+          font-size: 12vw;
+          font-family: League_Spartan-Bold;
+          width: 98%;
+          height: 18vw;
+          border-radius: 3vw;
+          margin-bottom: 3vw;
+          color: hsl(0, 100%, 100%);
+          padding: 2vw;
+
+        }
+        .keypad-background {
+          width: 98%;
+          height: fit-content;
+          background-color: hsl(223, 31%, 20%);
+          border-radius: 3vw;
+          z-index: 1;
+          padding: 6vw;
+        }
+        .row-buttons {
+          width: 100%;
+          height: fit-content;
+          margin-left: 1.5vw;
+          margin-top: 1.5vw;
+        }
+        .col-buttons {
+          display: grid;
+          grid-template-columns: auto auto auto auto;
+        }
+        .col-buttons-special {
+          display: grid;
+          grid-template-columns: auto auto;
+        }
+
+        .keys {
+          font-family: League_Spartan-Bold;
+          font-size: 8vw;
+          width: 17vw;
+          height: 17vw;
+          background-color: hsl(0, 0%, 90%);
+          border: solid 1px hsl(0, 0%, 90%);
+          border-radius: 2vw;
+          box-shadow: 0 1.2vw hsl(28, 16%, 65%);
+          margin-top: 2vw;
+          color: hsl(221, 14%, 31%);
+        }
+        .keys-special {
+          font-family: League_Spartan-Bold;
+          font-size: 8vw;
+          width: 37vw;
+          height: 17vw;
+          background-color: hsl(0, 0%, 90%);
+          border: solid 1px hsl(0, 0%, 90%);
+          border-radius: 2vw;
+          box-shadow: 0 1.2vw hsl(28, 16%, 65%);
+          margin-top: 2vw;
+        }
+        .attribution {
+          font-family: League_Spartan-Medium;
+          font-size: 4vw;
+          text-align: center;
+          margin-top: 2vw;
+          color: white;
+        }
+        .attribution a {
+          color: hsl(52, 100%, 62%);
+        }
+      }
     </style>
   </head>
   <body id="body" onload="onLoad()">
-    <div class="main-container">
-      <div class="container-title-selector-div">
-        <label id="lbl_title" class="label-title">calc</label>
-        <label id="lbl_theme" class="label-theme">THEME</label>
-        <div class="theme-selector-div">
-          <div id="number_theme_selector_div" class="number-theme-selector-div">
-            <label id="lbl_selector1" class="number-theme-selector-label"
-              >1</label
+    <div class="big-container">
+      <div class="main-container">
+        <div class="container-title-selector-div">
+          <label id="lbl_title" class="label-title">calc</label>
+          <label id="lbl_theme" class="label-theme">THEME</label>
+          <div class="theme-selector-div">
+            <div
+              id="number_theme_selector_div"
+              class="number-theme-selector-div"
             >
-            <label id="lbl_selector2" class="number-theme-selector-label"
-              >2</label
-            >
-            <label id="lbl_selector3" class="number-theme-selector-label"
-              >3</label
-            >
+              <label id="lbl_selector1" class="number-theme-selector-label"
+                >1</label
+              >
+              <label id="lbl_selector2" class="number-theme-selector-label"
+                >2</label
+              >
+              <label id="lbl_selector3" class="number-theme-selector-label"
+                >3</label
+              >
+            </div>
+            <div id="btn_theme_selector_div" class="button-theme-selector-div">
+              <button
+                id="btn_selector1"
+                class="button-selector"
+                type="button"
+                onclick="chooseSkin()"
+              ></button>
+              <button
+                id="btn_selector2"
+                class="button-selector"
+                type="button"
+                onclick="chooseSkin()"
+              ></button>
+              <button
+                id="btn_selector3"
+                class="button-selector"
+                type="button"
+                onclick="chooseSkin()"
+              ></button>
+            </div>
           </div>
-          <div id="btn_theme_selector_div" class="button-theme-selector-div">
-            <button
-              id="btn_selector1"
-              class="button-selector"
-              type="button"
-              onclick="chooseSkin()"
-            ></button>
-            <button
-              id="btn_selector2"
-              class="button-selector"
-              type="button"
-              onclick="chooseSkin()"
-            ></button>
-            <button
-              id="btn_selector3"
-              class="button-selector"
-              type="button"
-              onclick="chooseSkin()"
-            ></button>
+        </div>
+        <!-- screen  -->
+        <input class="screen-calc" id="screen_calc" type="text" />
+        <!-- keypad background -->
+        <div id="keypad_background" class="keypad-background">
+          <!-- keypad buttons -->
+          <div class="row-buttons">
+            <div class="col-buttons">
+              <button onclick="detectKey()" id="7" class="keys">7</button>
+              <button onclick="detectKey()" id="8" class="keys">8</button>
+              <button onclick="detectKey()" id="9" class="keys">9</button>
+              <button onclick="detectKey()" id="DEL" class="keys">DEL</button>
+            </div>
+          </div>
+          <div class="row-buttons">
+            <div class="col-buttons">
+              <button onclick="detectKey()" id="4" class="keys">4</button>
+              <button onclick="detectKey()" id="5" class="keys">5</button>
+              <button onclick="detectKey()" id="6" class="keys">6</button>
+              <button onclick="detectKey()" id="+" class="keys">+</button>
+            </div>
+          </div>
+          <div class="row-buttons">
+            <div class="col-buttons">
+              <button onclick="detectKey()" id="1" class="keys">1</button>
+              <button onclick="detectKey()" id="2" class="keys">2</button>
+              <button onclick="detectKey()" id="3" class="keys">3</button>
+              <button onclick="detectKey()" id="-" class="keys">-</button>
+            </div>
+          </div>
+          <div class="row-buttons">
+            <div class="col-buttons">
+              <button onclick="detectKey()" id="," class="keys">.</button>
+              <button onclick="detectKey()" id="0" class="keys">0</button>
+              <button onclick="detectKey()" id="/" class="keys">/</button>
+              <button onclick="detectKey()" id="x" class="keys">x</button>
+            </div>
+          </div>
+          <div class="row-buttons">
+            <div class="col-buttons-special">
+              <button onclick="detectKey()" id="RESET" class="keys-special">
+                RESET
+              </button>
+              <button onclick="detectKey()" id="=" class="keys-special">
+                =
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      <!-- screen  -->
-      <input class="screen-calc" id="screen_calc" type="text" disabled />
-      <!-- keypad background -->
-      <div id="keypad_background" class="keypad-background">
-        <!-- keypad buttons -->
-        <div class="row-buttons">
-          <div class="col-buttons">
-            <button onclick="detectKey()" id="7" class="keys">7</button>
-            <button onclick="detectKey()" id="8" class="keys">8</button>
-            <button onclick="detectKey()" id="9" class="keys">9</button>
-            <button onclick="detectKey()" id="DEL" class="keys">DEL</button>
-          </div>
-        </div>
-        <div class="row-buttons">
-          <div class="col-buttons">
-            <button onclick="detectKey()" id="4" class="keys">4</button>
-            <button onclick="detectKey()" id="5" class="keys">5</button>
-            <button onclick="detectKey()" id="6" class="keys">6</button>
-            <button onclick="detectKey()" id="+" class="keys">+</button>
-          </div>
-        </div>
-        <div class="row-buttons">
-          <div class="col-buttons">
-            <button onclick="detectKey()" id="1" class="keys">1</button>
-            <button onclick="detectKey()" id="2" class="keys">2</button>
-            <button onclick="detectKey()" id="3" class="keys">3</button>
-            <button onclick="detectKey()" id="-" class="keys">-</button>
-          </div>
-        </div>
-        <div class="row-buttons">
-          <div class="col-buttons">
-            <button onclick="detectKey()" id="," class="keys">.</button>
-            <button onclick="detectKey()" id="0" class="keys">0</button>
-            <button onclick="detectKey()" id="/" class="keys">/</button>
-            <button onclick="detectKey()" id="x" class="keys">x</button>
-          </div>
-        </div>
-        <div class="row-buttons">
-          <div class="col-buttons-special">
-            <button onclick="detectKey()" id="RESET" class="keys-special">
-              RESET
-            </button>
-            <button onclick="detectKey()" id="=" class="keys-special">=</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <footer id="attribution" class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">ZHB copyright@April-2026</a>.
-    </footer>
+      <footer id="attribution" class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by <a href="#">ZHB copyright@April-2026</a>.
+      </footer>
+    </div>
   </body>
   <script>
-    var tempAddition = 0;
-
     const keys_arr = [
       "0",
       "1",
@@ -631,39 +783,93 @@
       result = "";
     var floatNum1 = 0,
       floatResult = 0;
-    var flagOp=false;
-    var flagKey=false;
+    var flagOpAdd = false;
+    var flagOpSub = false;
+    var flagOpMul = false;
+    var flagOpDiv = false;
+
+    var flagKey = false;
+    var flagEq = "";
     function addition() {
-      if (!flagOp) {
+      if (!flagOpAdd) {
         num1 = document
           .getElementById("screen_calc")
           .value.replaceAll(",", ".");
         floatNum1 = parseFloat(num1);
+
         floatResult += floatNum1;
         result = floatResult.toString().replaceAll(".", ",");
         document.getElementById("screen_calc").value = result;
-        flagOp = true;
+        flagOpAdd = true;
+        flagOpSub = false;
+        flagOpMul = false;
+        flagOpDiv = false;
         flagKey = false;
+        flagEq = "+";
       }
     }
     function substraction() {
-      if (!flagOp) {
+      if (!flagOpSub) {
         num1 = document
           .getElementById("screen_calc")
           .value.replaceAll(",", ".");
         floatNum1 = parseFloat(num1);
+
         floatResult -= floatNum1;
         result = floatResult.toString().replaceAll(".", ",");
         document.getElementById("screen_calc").value = result;
-        flagOp = true;
+        flagOpAdd = false;
+        flagOpSub = true;
+        flagOpMul = false;
+        flagOpDiv = false;
         flagKey = false;
+        flagEq = "-";
+      }
+    }
+    function multiplication() {
+      if (!flagOpMul) {
+        num1 = document
+          .getElementById("screen_calc")
+          .value.replaceAll(",", ".");
+        floatNum1 = parseFloat(num1);
+
+        floatResult *= floatNum1;
+        result = floatResult.toString().replaceAll(".", ",");
+        document.getElementById("screen_calc").value = result;
+        flagOpAdd = false;
+        flagOpSub = false;
+        flagOpMul = true;
+        flagOpDiv = false;
+        flagKey = false;
+        flagEq = "x";
+      }
+    }
+    function division() {
+      if (!flagOpDiv) {
+        num1 = document
+          .getElementById("screen_calc")
+          .value.replaceAll(",", ".");
+        floatNum1 = parseFloat(num1);
+
+        floatResult /= floatNum1;
+        result = floatResult.toString().replaceAll(".", ",");
+        document.getElementById("screen_calc").value = result;
+        flagOpAdd = false;
+        flagOpSub = false;
+        flagOpMul = false;
+        flagOpDiv = true;
+        flagKey = false;
+        flagEq = "/";
       }
     }
     function detectKey() {
       if (!flagKey) {
         clearScreen();
         flagKey = true;
-        flagOp = false;
+        flagOpAdd = false;
+        flagOpSub = false;
+        flagOpMul = false;
+        flagOpDiv = false;
       }
       const idKey = event.target.id;
       const idScreen = document.getElementById("screen_calc");
@@ -674,7 +880,10 @@
         result = "";
         floatNum1 = 0;
         floatResult = 0;
-        flagOp = false;
+        flagOpAdd = false;
+        flagOpSub = false;
+        flagOpMul = false;
+        flagOpDiv = false;
         flagKey = false;
         return;
       }
@@ -690,7 +899,36 @@
         substraction();
         return;
       }
-
+      if (idKey === "x") {
+        multiplication();
+        return;
+      }
+      if (idKey === "/") {
+        division();
+        return;
+      }
+      if (idKey === "=") {
+        switch (flagEq) {
+          case "+":
+            addition();
+            return;
+            break;
+          case "-":
+            substraction();
+            return;
+            break;
+          case "x":
+            multiplication();
+            return;
+            break;
+          case "/":
+            division();
+            return;
+            break;
+          default:
+            break;
+        }
+      }
       idScreen.value += idKey;
     }
   </script>
