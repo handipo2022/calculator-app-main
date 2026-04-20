@@ -62,7 +62,6 @@
         display: grid;
         grid-template-rows: 1fr;
         padding: 2vw;
-        border: solid 1px yellow;
       }
       .theme-selector-div {
         display: row;
@@ -171,14 +170,27 @@
       }
       .keys-special {
         font-family: League_Spartan-Bold;
-        font-size: 8vw;
+        font-size: 6vw;
         width: 37vw;
         height: 17vw;
-        background-color: hsl(0, 0%, 90%);
-        border: solid 1px hsl(0, 0%, 90%);
         border-radius: 2vw;
-        box-shadow: 0 1.2vw hsl(28, 16%, 65%);
         margin-top: 2vw;
+      }
+      #DEL,
+      #RESET {
+        font-size: 6vw;
+        border: solid 1px hsl(225, 21%, 49%);
+        box-shadow: 0 1.2vw hsl(224, 28%, 35%);
+      }
+      .key-equal {
+        font-family: League_Spartan-Bold;
+        font-size: 6vw;
+        width: 37vw;
+        height: 17vw;
+        border-radius: 2vw;
+        margin-top: 2vw;
+        border: solid 1px hsl(6, 63%, 50%);
+        box-shadow: 0 1.2vw hsl(6, 70%, 34%);
       }
       .attribution {
         font-family: League_Spartan-Medium;
@@ -190,109 +202,58 @@
       .attribution a {
         color: hsl(52, 100%, 62%);
       }
-      @media (max-width: 375px) {
-      }
       @media (min-width: 375px) and (max-width: 480px) {
         .big-container {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          
+          align-items: center;
+          width: 96vw;
         }
         .main-container {
-          display: grid;
-          grid-template-rows: 1fr;
-          padding: 2vw;
-          width:99%;
-          border: solid 1px yellow;
+          padding: 0vw;
+          width: 86vw;
         }
         .theme-selector-div {
-          display: row;
-          flex-direction: column;
-          margin-bottom: 6vw;
+          margin-bottom: 5vw;
         }
         .button-theme-selector-div {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          background-color: hsl(223, 31%, 20%);
-          width: 18vw;
-          height: fit-content;
-          border-radius: 4vw;
-          padding: 1vw;
+          width: 16vw;
+          height: 5vw;
+          padding: 0.7vw;
         }
         .number-theme-selector-div {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          width: 18vw;
-          border-radius: 4vw;
-          padding: 1vw;
-          color: hsl(0, 100%, 100%);
-        }
-        .number-theme-selector-label {
-          color: hsl(0, 100%, 100%);
-          font-family: League_Spartan-Bold;
-          font-size: 2.5vw;
+          width: 16vw;
+          padding: 0.7vw;
         }
         .button-selector {
-          border-radius: 50%;
           width: 3.5vw;
           height: 3.5vw;
-          border: solid 1px hsl(6, 63%, 50%);
-          background-color: hsl(6, 63%, 50%);
-          cursor: pointer;
         }
         .container-title-selector-div {
-          display: grid;
-          grid-template-columns: 4fr 1fr 1fr;
-          width:100%;
-          border:solid 1px blue;
+          width: 85.7vw;
         }
         .label-title {
-          font-family: League_Spartan-ExtraBold;
-          font-size: 7vw;
-          color: hsl(0, 100%, 100%);
-          width: fit-content;
-          height: fit-content;
-          margin-top: 1.8vw;
+          font-size: 6vw;
+          margin-top: 1.1vw;
         }
         .label-theme {
-          font-family: League_Spartan-ExtraBold;
           font-size: 2.5vw;
-          width: fit-content;
-          height: fit-content;
-          color: hsl(0, 100%, 100%);
-          margin-top: 6.2vw;
+          margin-top: 6vw;
         }
         .screen-calc {
-          background-color: hsl(224, 36%, 15%);
-          border: solid 1px hsl(224, 36%, 15%);
-          text-align: right;
-          font-size: 12vw;
-          font-family: League_Spartan-Bold;
-          width: 98%;
+          font-size: 10vw;
+          width: 85.7vw;
           height: 18vw;
-          border-radius: 3vw;
-          margin-bottom: 3vw;
-          color: hsl(0, 100%, 100%);
-          padding: 2vw;
-
         }
         .keypad-background {
-          width: 98%;
-          height: fit-content;
-          background-color: hsl(223, 31%, 20%);
-          border-radius: 3vw;
-          z-index: 1;
-          padding: 6vw;
+          width: 85.7vw;
+          height: 112vw;
+          padding: 4vw;
         }
         .row-buttons {
-          width: 100%;
-          height: fit-content;
-          margin-left: 1.5vw;
-          margin-top: 1.5vw;
+          margin-bottom: 3.5vw;
         }
+
         .col-buttons {
           display: grid;
           grid-template-columns: auto auto auto auto;
@@ -301,39 +262,625 @@
           display: grid;
           grid-template-columns: auto auto;
         }
-
         .keys {
-          font-family: League_Spartan-Bold;
-          font-size: 8vw;
-          width: 17vw;
-          height: 17vw;
-          background-color: hsl(0, 0%, 90%);
-          border: solid 1px hsl(0, 0%, 90%);
-          border-radius: 2vw;
-          box-shadow: 0 1.2vw hsl(28, 16%, 65%);
-          margin-top: 2vw;
-          color: hsl(221, 14%, 31%);
+          font-size: 9vw;
+          width: 15vw;
+          height: 15vw;
+          box-shadow: 0 1vw hsl(28, 16%, 65%);
         }
         .keys-special {
-          font-family: League_Spartan-Bold;
-          font-size: 8vw;
-          width: 37vw;
-          height: 17vw;
-          background-color: hsl(0, 0%, 90%);
-          border: solid 1px hsl(0, 0%, 90%);
+          font-size: 9vw;
+          width: 34vw;
+          height: 15vw;
           border-radius: 2vw;
-          box-shadow: 0 1.2vw hsl(28, 16%, 65%);
+        }
+        #DEL,
+        #RESET {
+          font-size: 6vw;
+          border: solid 1px hsl(225, 21%, 49%);
+          box-shadow: 0 1vw hsl(224, 28%, 35%);
+        }
+        .key-equal {
+          font-size: 6vw;
+          width: 34vw;
+          height: 15vw;
+          border-radius: 2vw;
           margin-top: 2vw;
+          border: solid 1px hsl(6, 63%, 50%);
+          box-shadow: 0 1vw hsl(6, 70%, 34%);
         }
         .attribution {
-          font-family: League_Spartan-Medium;
-          font-size: 4vw;
-          text-align: center;
-          margin-top: 2vw;
-          color: white;
+          font-size: 3vw;
+          margin-top: 3vw;
         }
-        .attribution a {
-          color: hsl(52, 100%, 62%);
+      }
+      @media (min-width: 480px) and (max-width: 768px) {
+        body {
+          padding: 1vw;
+          margin-left: 4vw;
+        }
+        .big-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 90vw;
+        }
+        .main-container {
+          padding: 0vw;
+          width: 82vw;
+        }
+        .theme-selector-div {
+          margin-bottom: 5vw;
+        }
+        .button-theme-selector-div {
+          width: 14vw;
+          height: 4vw;
+          padding: 0.5vw;
+        }
+        .number-theme-selector-div {
+          width: 14vw;
+          padding: 0.5vw;
+        }
+        .number-theme-selector-label {
+          font-size: 2.4vw;
+        }
+        .button-selector {
+          width: 3vw;
+          height: 3vw;
+        }
+        .container-title-selector-div {
+          width: 81.7vw;
+        }
+        .label-title {
+          font-size: 5vw;
+          margin-top: 1.1vw;
+        }
+        .label-theme {
+          font-size: 2vw;
+          margin-top: 4.5vw;
+        }
+        .screen-calc {
+          font-size: 10vw;
+          width: 81.5vw;
+          height: 16vw;
+          border-radius: 1.5vw;
+        }
+        .keypad-background {
+          width: 81.5vw;
+          height: 83vw;
+          padding: 3vw;
+          border-radius: 1.5vw;
+        }
+
+        .row-buttons {
+          margin-bottom: 1.5vw;
+        }
+        .keys {
+          font-size: 6vw;
+          width: 17vw;
+          height: 11vw;
+          box-shadow: 0 0.8vw hsl(28, 16%, 65%);
+        }
+
+        .keys-special {
+          font-size: 4vw;
+          width: 36vw;
+          height: 11vw;
+          border-radius: 2vw;
+        }
+        #DEL,
+        #RESET {
+          font-size: 4vw;
+          border: solid 1px hsl(225, 21%, 49%);
+          box-shadow: 0 0.8vw hsl(224, 28%, 35%);
+        }
+        .key-equal {
+          font-size: 4vw;
+          width: 36vw;
+          height: 11vw;
+          border-radius: 2vw;
+          margin-top: 2vw;
+          border: solid 1px hsl(6, 63%, 50%);
+          box-shadow: 0 0.8vw hsl(6, 70%, 34%);
+        }
+        .attribution {
+          font-size: 2.5vw;
+          margin-top: 4vw;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 900px) {
+        body {
+          padding: 1vw;
+          margin-left: 4vw;
+        }
+        .big-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 90vw;
+        }
+        .main-container {
+          padding: 0vw;
+          width: 82vw;
+        }
+        .theme-selector-div {
+          margin-bottom: 5vw;
+        }
+        .button-theme-selector-div {
+          width: 14vw;
+          height: 4vw;
+          padding: 0.5vw;
+        }
+        .number-theme-selector-div {
+          width: 14vw;
+          padding: 0.5vw;
+        }
+        .number-theme-selector-label {
+          font-size: 2.4vw;
+        }
+        .button-selector {
+          width: 3vw;
+          height: 3vw;
+        }
+        .container-title-selector-div {
+          width: 81.7vw;
+        }
+        .label-title {
+          font-size: 5vw;
+          margin-top: 1.1vw;
+        }
+        .label-theme {
+          font-size: 2vw;
+          margin-top: 4.5vw;
+        }
+        .screen-calc {
+          font-size: 10vw;
+          width: 81.5vw;
+          height: 16vw;
+          border-radius: 1.5vw;
+        }
+        .keypad-background {
+          width: 81.5vw;
+          height: 83vw;
+          padding: 3vw;
+          border-radius: 1.5vw;
+        }
+
+        .row-buttons {
+          margin-bottom: 1.5vw;
+        }
+        .keys {
+          font-size: 6vw;
+          width: 17vw;
+          height: 11vw;
+          box-shadow: 0 0.6vw hsl(28, 16%, 65%);
+        }
+
+        .keys-special {
+          font-size: 4vw;
+          width: 36vw;
+          height: 11vw;
+          border-radius: 2vw;
+        }
+        #DEL,
+        #RESET {
+          font-size: 4vw;
+          border: solid 1px hsl(225, 21%, 49%);
+          box-shadow: 0 0.6vw hsl(224, 28%, 35%);
+        }
+        .key-equal {
+          font-size: 4vw;
+          width: 36vw;
+          height: 11vw;
+          border-radius: 2vw;
+          margin-top: 2vw;
+          border: solid 1px hsl(6, 63%, 50%);
+          box-shadow: 0 0.6vw hsl(6, 70%, 34%);
+        }
+        .attribution {
+          font-size: 2.5vw;
+          margin-top: 4vw;
+        }
+      }
+      @media (min-width: 900px) and (max-width: 1024px) {
+        body {
+          padding: 0vw;
+          margin-left: 2vw;
+        }
+        .big-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 95vw;
+          margin-left: 0vw;
+        }
+        .main-container {
+          padding: 0vw;
+          width: 75vw;
+       }
+        .theme-selector-div {
+          margin-bottom: 3vw;
+        }
+        .button-theme-selector-div {
+          width: 12vw;
+          height: 3vw;
+          padding: 0.5vw;
+          border-radius: 1.2vw;
+        }
+        .number-theme-selector-div {
+          width: 12vw;
+          padding: 0.5vw;
+        }
+        .number-theme-selector-label {
+          font-size: 2vw;
+        }
+        .button-selector {
+          width: 2vw;
+          height: 2vw;
+        }
+        .container-title-selector-div {
+          width: 75vw;
+          grid-template-columns: 4fr 0.7fr 0.85fr;
+        }
+        .label-title {
+          font-size: 4vw;
+          margin-top: 1vw;
+        }
+        .label-theme {
+          font-size: 1.5vw;
+          margin-top: 4vw;
+        }
+        .screen-calc {
+          font-size: 8vw;
+          width: 75vw;
+          height: 14vw;
+          border-radius: 1.5vw;
+          margin-bottom: 1.8vw;
+        }
+        .keypad-background {
+          width: 75vw;
+          height: 72vw;
+          padding: 1vw;
+          border-radius: 1.5vw;
+        }
+
+        .row-buttons {
+          margin-bottom: 2.7vw;
+        }
+        .keys {
+          font-size: 5vw;
+          width: 14vw;
+          height: 8vw;
+          box-shadow: 0 0.5vw hsl(28, 16%, 65%);
+        }
+
+        .keys-special {
+          font-size: 3vw;
+          width: 32vw;
+          height: 11vw;
+          border-radius: 2vw;
+        }
+        #DEL,
+        #RESET {
+          font-size: 3vw;
+          border: solid 1px hsl(225, 21%, 49%);
+          box-shadow: 0 0.5vw hsl(224, 28%, 35%);
+        }
+        .key-equal {
+          font-size: 3vw;
+          width: 32vw;
+          height: 11vw;
+          border-radius: 2vw;
+          margin-top: 2vw;
+          border: solid 1px hsl(6, 63%, 50%);
+          box-shadow: 0 0.5vw hsl(6, 70%, 34%);
+        }
+        .attribution {
+          font-size: 2.2vw;
+          margin-top: 3vw;
+        }
+      }
+      @media (min-width: 1024px) and (max-width: 1200px) {
+        body {
+          padding: 0vw;
+          margin-left: 2vw;
+        }
+        .big-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 95vw;
+          margin-left: 0vw;
+        }
+        .main-container {
+          padding: 0vw;
+          width: 65vw;
+        }
+        .theme-selector-div {
+          margin-bottom: 2vw;
+        }
+        .button-theme-selector-div {
+          width: 10vw;
+          height: 2vw;
+          padding: 0.2vw;
+          border-radius: 0.8vw;
+        }
+        .number-theme-selector-div {
+          width: 10vw;
+          padding: 0.2vw;
+        }
+        .number-theme-selector-label {
+          font-size: 1.2vw;
+        }
+        .button-selector {
+          width: 1.5vw;
+          height: 1.5vw;
+        }
+        .container-title-selector-div {
+          width: 65vw;
+          grid-template-columns: 4fr 0.7fr 0.85fr;
+        }
+        .label-title {
+          font-size: 3.5vw;
+          margin-top: 0.5vw;
+        }
+        .label-theme {
+          font-size: 1.2vw;
+          margin-top: 2vw;
+        }
+        .screen-calc {
+          font-size: 6vw;
+          width: 65vw;
+          height: 10vw;
+          border-radius: 1vw;
+          margin-bottom: 1.4vw;
+        }
+        .keypad-background {
+          width: 65vw;
+          height: 55vw;
+          padding-left: 5vw;
+          padding-right: 5vw;
+          border-radius: 1vw;
+        }
+
+        .row-buttons {
+          margin-bottom: 1vw;
+        }
+        .keys {
+          font-size: 3vw;
+          width: 10vw;
+          height: 6vw;
+          box-shadow: 0 0.5vw hsl(28, 16%, 65%);
+          border-radius: 1vw;
+        }
+        .keys-special {
+          font-size: 2vw;
+          width: 24vw;
+          height: 6vw;
+          border-radius: 1vw;
+        }
+        #DEL,
+        #RESET {
+          font-size: 2vw;
+          border: solid 1px hsl(225, 21%, 49%);
+          box-shadow: 0 0.5vw hsl(224, 28%, 35%);
+        }
+        .key-equal {
+          font-size: 2vw;
+          width: 24vw;
+          height: 6vw;
+          border-radius: 1vw;
+          margin-top: 2vw;
+          border: solid 1px hsl(6, 63%, 50%);
+          box-shadow: 0 0.5vw hsl(6, 70%, 34%);
+        }
+        .attribution {
+          font-size: 1.5vw;
+          margin-top: 3vw;
+        }
+      }
+      @media (min-width: 1200px) and (max-width: 1440px) {
+        body {
+          padding: 0vw;
+          margin-left: 7vw;
+        }
+        .big-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 85vw;
+          margin-left: 0vw;
+        }
+        .main-container {
+          padding: 0vw;
+          width: 55vw;
+          margin-left: -4vw;
+        }
+        .theme-selector-div {
+          margin-bottom: 2vw;
+        }
+        .button-theme-selector-div {
+          width: 10vw;
+          height: 2vw;
+          padding: 0.2vw;
+          border-radius: 0.8vw;
+        }
+        .number-theme-selector-div {
+          width: 10vw;
+          padding: 0.2vw;
+        }
+        .number-theme-selector-label {
+          font-size: 1.2vw;
+        }
+        .button-selector {
+          width: 1.5vw;
+          height: 1.5vw;
+        }
+        .container-title-selector-div {
+          width: 55vw;
+          grid-template-columns: 4fr 0.7fr 0.85fr;
+        }
+        .label-title {
+          font-size: 3.5vw;
+          margin-top: 0.5vw;
+        }
+        .label-theme {
+          font-size: 1.2vw;
+          margin-top: 2vw;
+        }
+        .screen-calc {
+          font-size: 5vw;
+          width: 55vw;
+          height: 10vw;
+          border-radius: 1vw;
+          margin-bottom: 1.4vw;
+        }
+        .keypad-background {
+          width: 55vw;
+          height: 47vw;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          padding-top: 2vw;
+          border-radius: 1vw;
+        }
+
+        .row-buttons {
+          margin-bottom: 1vw;
+        }
+        .keys {
+          font-size: 2.8vw;
+          width: 10vw;
+          height: 4vw;
+          border-radius: 0.5vw;
+          box-shadow: 0 0.4vw hsl(28, 16%, 65%);
+        }
+        .keys-special {
+          font-size: 2vw;
+          width: 22vw;
+          height: 6vw;
+          border-radius: 1vw;
+          box-shadow: 0 0.4vw hsl(28, 16%, 65%);
+        }
+        #DEL,
+        #RESET {
+          font-size: 2vw;
+          border: solid 1px hsl(225, 21%, 49%);
+          box-shadow: 0 0.4vw hsl(224, 28%, 35%);
+        }
+        .key-equal {
+          font-size: 2vw;
+          width: 22vw;
+          height: 6vw;
+          border-radius: 1vw;
+          margin-top: 2vw;
+          border: solid 1px hsl(6, 63%, 50%);
+          box-shadow: 0 0.4vw hsl(6, 70%, 34%);
+        }
+        .attribution {
+          font-size: 1.5vw;
+          margin-top: 3vw;
+        }
+      }
+       @media (min-width: 1440px){
+        body {
+          padding: 0vw;
+          margin-left: 7vw;
+        }
+        .big-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 85vw;
+          margin-left: 0vw;
+        }
+        .main-container {
+          padding: 0vw;
+          width: 55vw;
+          margin-left: -4vw;
+        }
+        .theme-selector-div {
+          margin-bottom: 2vw;
+        }
+        .button-theme-selector-div {
+          width: 10vw;
+          height: 2vw;
+          padding: 0.2vw;
+          border-radius: 0.8vw;
+        }
+        .number-theme-selector-div {
+          width: 10vw;
+          padding: 0.2vw;
+        }
+        .number-theme-selector-label {
+          font-size: 1.2vw;
+        }
+        .button-selector {
+          width: 1.5vw;
+          height: 1.5vw;
+        }
+        .container-title-selector-div {
+          width: 55vw;
+          grid-template-columns: 4fr 0.7fr 0.85fr;
+        }
+        .label-title {
+          font-size: 3.5vw;
+          margin-top: 0.5vw;
+        }
+        .label-theme {
+          font-size: 1.2vw;
+          margin-top: 2vw;
+        }
+        .screen-calc {
+          font-size: 5vw;
+          width: 55vw;
+          height: 10vw;
+          border-radius: 1vw;
+          margin-bottom: 1.4vw;
+        }
+        .keypad-background {
+          width: 55vw;
+          height: 47vw;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          padding-top: 2vw;
+          border-radius: 1vw;
+        }
+
+        .row-buttons {
+          margin-bottom: 1vw;
+        }
+        .keys {
+          font-size: 2.8vw;
+          width: 10vw;
+          height: 4vw;
+          border-radius: 0.5vw;
+          box-shadow: 0 0.4vw hsl(28, 16%, 65%);
+        }
+        .keys-special {
+          font-size: 2vw;
+          width: 22vw;
+          height: 6vw;
+          border-radius: 1vw;
+          box-shadow: 0 0.4vw hsl(28, 16%, 65%);
+        }
+        #DEL,
+        #RESET {
+          font-size: 2vw;
+          border: solid 1px hsl(225, 21%, 49%);
+          box-shadow: 0 0.4vw hsl(224, 28%, 35%);
+        }
+        .key-equal {
+          font-size: 2vw;
+          width: 22vw;
+          height: 6vw;
+          border-radius: 1vw;
+          margin-top: 2vw;
+          border: solid 1px hsl(6, 63%, 50%);
+          box-shadow: 0 0.4vw hsl(6, 70%, 34%);
+        }
+        .attribution {
+          font-size: 1.5vw;
+          margin-top: 3vw;
         }
       }
     </style>
@@ -423,9 +970,7 @@
               <button onclick="detectKey()" id="RESET" class="keys-special">
                 RESET
               </button>
-              <button onclick="detectKey()" id="=" class="keys-special">
-                =
-              </button>
+              <button onclick="detectKey()" id="=" class="key-equal">=</button>
             </div>
           </div>
         </div>
@@ -459,18 +1004,11 @@
     const special_keys_arr1 = ["DEL", "RESET"];
     const special_keys_arr2 = ["="];
     /* function to toggle key's style */
-    function changeKeysSkin(
-      keys_arr,
-      backgroundColor,
-      borderColor,
-      boxShadow,
-      color
-    ) {
+    function changeKeysSkin(keys_arr, backgroundColor, borderColor, color) {
       for (let j = 0; j < keys_arr.length; j++) {
         document.getElementById(keys_arr[j]).style.backgroundColor =
           backgroundColor;
         document.getElementById(keys_arr[j]).style.borderColor = borderColor;
-        document.getElementById(keys_arr[j]).style.boxShadow = boxShadow;
         document.getElementById(keys_arr[j]).style.color = color;
       }
     }
@@ -480,19 +1018,14 @@
       special_keys_arr,
       color,
       backgroundColor,
-      boxShadow,
-      borderColor,
-      fontSize
+      borderColor
     ) {
       for (let j = 0; j < special_keys_arr.length; j++) {
         document.getElementById(special_keys_arr[j]).style.color = color;
         document.getElementById(special_keys_arr[j]).style.backgroundColor =
           backgroundColor;
-        document.getElementById(special_keys_arr[j]).style.boxShadow =
-          boxShadow;
         document.getElementById(special_keys_arr[j]).style.borderColor =
           borderColor;
-        document.getElementById(special_keys_arr[j]).style.fontSize = fontSize;
       }
     }
     function onLoad() {
@@ -523,13 +1056,11 @@
         "hsl(224, 36%, 15%)";
       document.getElementById("keypad_background").style.color =
         "hsl(223, 31%, 20%)";
-
       /* toggle for keys */
       changeKeysSkin(
         keys_arr,
         "hsl(0, 0%, 90%)",
         "hsl(0, 0%, 90%)",
-        "0 1.2vw hsl(28, 16%, 65%)",
         "hsl(221, 14%, 31%)"
       );
 
@@ -538,17 +1069,13 @@
         special_keys_arr1,
         "hsl(0, 100%, 100%)",
         "hsl(225, 21%, 49%)",
-        "0 1.2vw hsl(224, 28%, 35%)",
-        "hsl(224, 28%, 35%)",
-        "6vw"
+        "hsl(224, 28%, 35%)"
       );
       changeSpecialKeysSkin(
         special_keys_arr2,
         "hsl(0, 100%, 100%)",
         "hsl(6, 63%, 50%)",
-        "0 1.2vw hsl(6, 70%, 34%)",
-        "hsl(224, 28%, 35%)",
-        "6vw"
+        "hsl(224, 28%, 35%)"
       );
     }
 
@@ -603,7 +1130,6 @@
             keys_arr,
             "hsl(0, 0%, 90%)",
             "hsl(0, 0%, 90%)",
-            "0 1.2vw hsl(28, 16%, 65%)",
             "hsl(221, 14%, 31%)"
           );
 
@@ -612,17 +1138,13 @@
             special_keys_arr1,
             "hsl(0, 100%, 100%)",
             "hsl(225, 21%, 49%)",
-            "0 1.2vw hsl(224, 28%, 35%)",
-            "hsl(224, 28%, 35%)",
-            "6vw"
+            "hsl(224, 28%, 35%)"
           );
           changeSpecialKeysSkin(
             special_keys_arr2,
             "hsl(0, 100%, 100%)",
             "hsl(6, 63%, 50%)",
-            "0 1.2vw hsl(6, 70%, 34%)",
-            "hsl(224, 28%, 35%)",
-            "6vw"
+            "hsl(224, 28%, 35%)"
           );
           break;
 
@@ -671,7 +1193,6 @@
             keys_arr,
             "hsl(0, 0%, 90%)",
             "hsl(0, 0%, 90%)",
-            "0 1.2vw hsl(35, 11%, 61%)",
             "hsl(221, 14%, 31%)"
           );
 
@@ -680,17 +1201,13 @@
             special_keys_arr1,
             "hsl(0, 100%, 100%)",
             "hsl(225, 21%, 49%)",
-            "0 1.2vw hsl(224, 28%, 35%)",
-            "hsl(224, 28%, 35%)",
-            "6vw"
+            "hsl(224, 28%, 35%)"
           );
           changeSpecialKeysSkin(
             special_keys_arr2,
             "hsl(0, 100%, 100%)",
             "hsl(6, 63%, 50%)",
-            "0 1.2vw hsl(6, 70%, 34%)",
-            "hsl(224, 28%, 35%)",
-            "6vw"
+            "hsl(224, 28%, 35%)"
           );
           break;
 
@@ -739,7 +1256,6 @@
             keys_arr,
             "hsl(268, 47%, 21%)",
             "hsl(268, 47%, 21%)",
-            "0 1.2vw hsl(290, 70%, 36%)",
             "hsl(52, 100%, 62%)"
           );
 
@@ -748,17 +1264,13 @@
             special_keys_arr1,
             "hsl(0, 100%, 100%)",
             "hsl(281, 89%, 26%)",
-            "0 1.2vw hsl(285, 91%, 52%)",
-            "hsl(224, 28%, 35%)",
-            "6vw"
+            "hsl(224, 28%, 35%)"
           );
           changeSpecialKeysSkin(
             special_keys_arr2,
             "hsl(0, 100%, 100%)",
             "hsl(176, 100%, 44%)",
-            "0 1.2vw hsl(177, 92%, 70%)",
-            "hsl(224, 28%, 35%)",
-            "6vw"
+            "hsl(224, 28%, 35%)"
           );
           break;
         default:
